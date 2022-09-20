@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.whole-game {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.card img {
+  width: auto;
+  max-height: fit-content;
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+}
+
+h1 {
+ 
+}
