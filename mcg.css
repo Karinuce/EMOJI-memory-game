@@ -4,40 +4,44 @@
   box-sizing: border-box;
 }
 
-.whole-game {
+section {
   display: grid;
-  place-items: center;
-  min-height: 100vh;
+  grid-template-columns: repeat(4, 11rem);
+  grid-template-rows: repeat(4, 11rem);
+  perspective: 1000px;
 }
 
-.all-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.cards {
-  display: grid;
-  place-items: center;
+h1 {
+  padding-bottom: 25px;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+}
+
+.backCard {
+  position: absolute;
+  background-color:black;
   width: 150px;
   height: 150px;
-  background-color: black;
-  border-radius: 5px;
+  backface-visibility: hidden;
 }
 
-.cards img {
-  width: auto;
-  max-height: fit-content;
-  width: 120px;
-  height: 120px;
-  opacity: 0;
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .7s;
 }
 
-.flipCard {
-  transform: rotateY(180deg);
-}
-
-.card.correct img {
-  opacity: 100;
-  background-color:green;
+.flippedCard {
+  transform: rotateY(180deg); 
 }
