@@ -95,13 +95,13 @@ const newGame = () => {
         frontCard[index].src = item.imgSrc;
     });
     const numberOfTries = document.querySelector("span");
-    let tries = 7;
+    tries = 7;
     numberOfTries.textContent = tries;
 };
 
 const flippedCard = document.querySelectorAll(".flippedCard");
     if (flippedCard.length === 16){
-        restart();
+        newGame();
         alert("Congrats! You won!");
 };
 

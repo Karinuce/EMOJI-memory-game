@@ -51,7 +51,7 @@ h1 {
 .card {
   position: relative;
   transform-style: preserve-3d;
-  transition: transform .7s;
+  transition: transform 0.7s;
 }
 
 .flippedCard {
